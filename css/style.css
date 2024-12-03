@@ -1,269 +1,289 @@
+/* Reset some basic styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
 }
+
 body {
-  background: #f0ffff;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
 }
-li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  font-weight: bold;
-}
-a:hover {
-  color: orange;
-}
-/* header */
+
 header {
-  position: relative;
-  padding: 0 2rem;
-  margin-bottom: 60px;
-}
-nav {
-  position: fixed;
-  z-index: 99;
+  background-color: #2c6e49;
+  color: white;
+  padding: 15px 20px;
+  position: sticky;
   top: 0;
-  width: 100%;
+  z-index: 1000;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
-  padding: 0 1.5rem;
-  /* max-width: 1200px; */
-  left: 0;
-  right: 0;
-  background-color: #f0ffff;
-  width: 100%;
+  flex-wrap: wrap;
 }
+
 nav .logo {
   display: flex;
-  align-items: end;
+  align-items: center;
   gap: 10px;
 }
-nav .logo span {
-  color: black;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
+
 nav .logo img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+nav .logo span {
+  font-size: 1.75rem;
+  font-weight: bold;
 }
 
 nav .links {
   display: flex;
-  gap: 2rem;
-}
-nav .toggle_btn {
-  color: black;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: none;
-  /* margin-right: 50px; */
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
 }
 
-.action_btn {
-  background-color: orange;
-  color: #ffff;
-  padding: 0.5rem 1rem;
-  border: none;
-  outline: none;
-  border-radius: 20px;
-  font-size: 0.8rem;
+/* Hide the links by default on small screens */
+nav .links {
+  display: flex;
+}
+
+nav .links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
   font-weight: bold;
-  cursor: pointer;
-  transition: scale 0.2 ease;
+  transition: color 0.3s ease;
 }
-.action_btn:hover {
-  scale: 1.05;
-  color: #fff;
+
+nav .links a:hover {
+  color: #ffd700;
 }
-.action_btn:active {
-  scale: 0.95;
-}
-/* dropdown menu */
-.dropdown_menu {
-  z-index: 99;
+
+/* Hamburger menu toggle visibility */
+nav .menu-toggle {
   display: none;
-  position: fixed;
-  right: 2rem;
-  top: 80px;
-  width: 300px;
-  height: 0;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(15px);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.dropdown_menu li {
-  display: flex;
-  padding: 0.7rem;
-  align-items: center;
-  justify-content: center;
-}
-.dropdown_menu .action_btn {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.dropdown_menu.open {
-  height: 240px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-/* main */
-/* wrapper */
-.wrapper {
-  position: relative;
-  height: 300px;
+/* Show links when hamburger menu is clicked */
+nav .menu-toggle.active + .links {
   display: flex;
-  justify-content: space-around;
-  background: #f0f8ff;
-  align-items: center;
-}
-.wrapper .dot1 {
-  position: absolute;
-  height: 280px;
-  width: 280px;
-  background-color: orange;
-  border-radius: 50%;
-  left: -200px;
-  border: none;
-}
-.wrapper .dot2 {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  background-color: #f0f8ff;
-  border-radius: 50%;
-  left: -2px;
-  border: none;
-  transition: scale 0.2s ease;
-}
-.wrapper h1 {
-  color: black;
-  z-index: 1;
-}
-.img_trash img {
-  width: 250px;
-  height: 250px;
-}
-.img_trash {
-  border-radius: 50%;
-  background-color: #f0ffff;
-  border: none;
-}
-/* wrapper-main */
-.wrapper-main {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding: 12px;
 }
 
-/* content */
-.content {
-  padding: 1rem 3rem;
-  border-radius: 5px;
-  background-color: #f0f8ff;
-  border: none;
-}
-/* article */
-article {
-  width: 100%;
-  margin-bottom: 20px;
-}
-article h3,
-h4,
-p {
-  margin-bottom: 12px;
-}
-/* aside */
-aside {
-  width: 40%;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid grey;
-  max-height: 300px;
-  border-radius: 5px;
-  background-color: #f0f8ff;
-  border: none;
-}
-aside img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: grey;
-  margin-bottom: 12px;
-}
-aside .title {
-  color: orange;
-  align-self: center;
-  margin-bottom: 12px;
-  font-size: 0.9rem;
-}
-aside .subtitle {
-  font-size: 0.8rem;
-}
-/* footer */
-footer {
-  background-color: #f0f8ff;
-  height: 50px;
-  margin-top: 50px;
+/* Hero Section */
+.hero-section {
+  background-color: #3c9c6e;
+  color: #fff;
+  padding: 50px 20px;
   text-align: center;
 }
-footer .footer {
-  padding: 15px 16px;
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-section .lead {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero-section .cta-btn {
+  background-color: #ffd700;
+  padding: 15px 30px;
+  color: #2c6e49;
   font-weight: bold;
-  font-size: 0.8rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* responsive media 992px */
-@media (max-width: 992px) {
-  nav .links,
-  nav .action_btn {
-    display: none;
-  }
-  nav .toggle_btn {
-    display: block;
-  }
-  .dropdown_menu {
-    display: block;
-  }
-  .wrapper-main {
-    flex-direction: column;
-  }
-  aside {
-    width: 100%;
-  }
+.hero-section .cta-btn:hover {
+  background-color: #f39c12;
 }
 
-@media (max-width: 576px) {
-  .dropdown_menu {
-    left: 2rem;
-    width: unset;
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+/* Slider Section */
+.slider {
+  padding: 40px 20px;
+  background-color: #e9f7e9;
+}
+
+.slider h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.slider-item {
+  background-color: #2c6e49;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.25rem;
+  transition: background-color 0.3s ease;
+}
+
+.slider-item:hover {
+  background-color: #3c9c6e;
+}
+
+/* Footer */
+footer {
+  background-color: #2c6e49;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+footer .footer {
+  margin-top: 10px;
+}
+
+/* Wrapper Section for Edukasi Pemilahan Sampah */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #2c6e49;
+}
+
+.wrapper .content-left {
+  flex: 1;
+  text-align: left;
+}
+
+.wrapper .content-left h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.wrapper .img-sampah-right {
+  flex: 0.2;
+  margin-left: 20px;
+  border: #3c9c6e;
+  box-shadow: 0 40px 40px 20px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper .img-sampah-right img {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+  nav .logo span {
+    font-size: 1.25rem;
   }
+
+  nav .links {
+    gap: 15px;
+  }
+
   .wrapper {
     flex-direction: column;
+    text-align: center;
   }
-  .img_trash img {
-    width: 200px;
-    height: 200px;
+
+  .wrapper .content-left {
+    margin-bottom: 20px;
   }
+
+  .wrapper .img-trash-right {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+
+  .slider-item {
+    font-size: 1rem;
+  }
+
   .wrapper h1 {
+    font-size: 2rem;
+  }
+
+  nav .links {
+    display: none; /* Hide links on small screens */
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  nav .menu-toggle {
+    display: block; /* Show the hamburger menu on mobile */
+  }
+  .slider .row {
+    flex-direction: column;
+  }
+
+  .slider-item {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .hero-section .cta-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .lead {
+    font-size: 0.9rem;
+  }
+
+  .wrapper .content-left h1 {
     font-size: 1.5rem;
   }
-  .wrapper .dot2 {
-    display: none;
+
+  .slider h2 {
+    font-size: 1.5rem;
+  }
+
+  .slider-item {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .wrapper .img-trash-right img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero-section .cta-btn {
+    padding: 10px 20px;
   }
 }

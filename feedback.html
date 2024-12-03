@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css" />
-  <title>EcoTrash Education - Home</title>
+  <link rel="stylesheet" href="css/feedback.css" />
+  <title>EcoTrash Education - Form Feedback</title>
 </head>
 
 <body>
@@ -37,54 +40,47 @@
       <div class="dot1"></div>
       <div class="dot2"></div>
       <div class="content-left">
-        <h1>Edukasi Pemilahan Sampah</h1>
+        <h1>Edukasi Pemilihan Sampah</h1>
       </div>
       <div class="img-trash-right">
         <img src="img/image.png" alt="gambar sampah" width="120px" height="120px" />
       </div>
     </div>
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="container">
-        <h1 class="display-4">Edukasi Pemilahan Sampah</h1>
-        <p class="lead">Pemilahan sampah adalah langkah awal dalam menjaga kebersihan lingkungan dan mendukung
-          keberlanjutan. Dengan memilah sampah, kita dapat mendaur ulang dan mengurangi dampak sampah terhadap
-          lingkungan.</p>
-        <a href="edukasi.html" class="cta-btn">Pelajari Lebih Lanjut</a>
-        <br>
-        <div class="mt-4">
-          <img src="img/sampah.png" alt="Sampah Terpilah" class="img-fluid rounded">
+    <br>
+    <h1 class="text-center text-success"> Form Feedback</h1>
+    <div class="container-fluid">
+      <form>
+        <div class="form-group row">
+          <label for="text" class="col-4 col-form-label">Nama Lengkap</label>
+          <div class="col-8">
+            <input id="text" name="text" type="text" class="form-control">
+          </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Slider Section -->
-    <section class="slider">
-      <div class="container">
-        <h2 class="text-center mb-4">Fakta Tentang Pemilahan Sampah</h2>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="slider-item">
-              <p>"60% sampah di Indonesia tidak terolah dengan baik."</p>
-            </div>
+        <div class="form-group row">
+          <label for="text1" class="col-4 col-form-label">Alamat Email</label>
+          <div class="col-8">
+            <input id="text1" name="text1" type="text" class="form-control">
           </div>
-          <br>
-          <div class="col-md-4">
-            <div class="slider-item">
-              <p>"Pemilahan sampah bisa mengurangi polusi hingga 20%."</p>
-            </div>
-          </div>
-          <br>
-          <div class="col-md-4">
-            <div class="slider-item">
-              <p>"Yuk, mulai memilah sampah dari rumah!"</p>
-            </div>
-          </div>
-          <br>
         </div>
-      </div>
-    </section>
-
+        <div class="form-group row">
+          <label for="text2" class="col-4 col-form-label">Nomor Telepon</label>
+          <div class="col-8">
+            <input id="text2" name="text2" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="text3" class="col-4 col-form-label">Alamat Lengkap</label>
+          <div class="col-8">
+            <input id="text3" name="text3" type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="offset-4 col-8">
+            <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </main>
   <footer>
     <div class="footer">CopyRight@ecotrash education2024</div>
