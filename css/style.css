@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #2c6e49;
+  background-color: #5abd61 ;
   color: white;
   padding: 15px 20px;
   position: sticky;
@@ -37,6 +37,7 @@ nav .logo {
 nav .logo img {
   width: 40px;
   height: 40px;
+  border-radius: 50px;
 }
 
 nav .logo span {
@@ -60,6 +61,7 @@ nav .links a {
   text-decoration: none;
   color: white;
   font-size: 1rem;
+  margin: 10px;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -82,9 +84,9 @@ nav .menu-toggle.active + .links {
 
 /* Hero Section */
 .hero-section {
-  background-color: #3c9c6e;
+  background-color:  #5abd61;
   color: #fff;
-  padding: 50px 20px;
+  padding: 10px 10px;
   text-align: center;
 }
 
@@ -101,7 +103,7 @@ nav .menu-toggle.active + .links {
 .hero-section .cta-btn {
   background-color: #ffd700;
   padding: 15px 30px;
-  color: #2c6e49;
+  color:  #5abd61;
   font-weight: bold;
   text-decoration: none;
   border-radius: 5px;
@@ -118,53 +120,53 @@ nav .menu-toggle.active + .links {
   margin-top: 20px;
   border-radius: 20px;
 }
-
-/* Slider Section */
-.slider {
-  padding: 40px 20px;
-  background-color: #e9f7e9;
-}
-
-.slider h2 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.slider-item {
-  background-color: #2c6e49;
-  color: #fff;
-  padding: 20px;
+/* section card */
+.card {
+  border: none;
+  background-color:  #5abd61;
   border-radius: 10px;
-  text-align: center;
-  font-size: 1.25rem;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-.slider-item:hover {
-  background-color: #3c9c6e;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.card-body {
+  color: white;
 }
 
 /* Footer */
-footer {
-  background-color: #2c6e49;
-  color: #fff;
+.footer {
+  background-color:  #5abd61;
+  color: white;
+  padding: 20px 0;
   text-align: center;
-  padding: 20px;
-  font-size: 1rem;
+  position: relative;
 }
-
-footer .footer {
+.footer .social-icons {
   margin-top: 10px;
 }
-
+.footer .social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer .social-icons a:hover {
+  color: #ffb400;
+  transform: scale(1.2);
+}
+.footer .copyright {
+  margin-top: 15px;
+  font-size: 14px;
+}
 /* Wrapper Section for Edukasi Pemilahan Sampah */
 .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 20px;
-  background-color: #2c6e49;
+  background-color:  #5abd61;
 }
 
 .wrapper .content-left {
@@ -180,7 +182,7 @@ footer .footer {
 .wrapper .img-sampah-right {
   flex: 0.2;
   margin-left: 20px;
-  border: #3c9c6e;
+  border: #5abd61;
   box-shadow: 0 40px 40px 20px rgba(0, 0, 0, 0.5);
 }
 
